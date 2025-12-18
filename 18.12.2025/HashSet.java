@@ -1,3 +1,8 @@
+"""
+ Q : Given N pairs of strings, store each pair as an ordered pair where duplicates are not allowed.
+After reading each pair, print the number of unique pairs present so far using a set in Java.
+ """
+
 import java.io.*;
 import java.util.*;
 import java.text.*;
