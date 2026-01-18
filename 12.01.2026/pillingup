@@ -1,0 +1,30 @@
+# Q :
+# Check if cubes can be stacked vertically by picking only from left or right,
+# such that each upper cube is not larger than the one below.
+
+t = int(input())
+
+for _ in range(t):
+    n = int(input())
+    a = list(map(int, input().split()))
+
+    l = 0
+    r = n - 1
+    top = float('inf')
+    ok = True
+
+    while l <= r:
+        if a[l] >= a[r]:
+            pick = a[l]
+            l += 1
+        else:
+            pick = a[r]
+            r -= 1
+
+        if pick > top:
+            ok = False
+            break
+
+        top = pick
+
+    print("Yes" if ok else "No")
